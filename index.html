@@ -40,7 +40,35 @@
 </head>
 <body>
 
-<!-- sections will go here -->
-
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--paper);
+    border-bottom:4px solid var(--ink);
+    padding:16px 6vw;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .nav .logo{font-family:'Bangers',cursive;font-size:26px;letter-spacing:0.03em;}
+  .nav .logo span{color:var(--red);}
+  .nav ul{display:flex;gap:26px;list-style:none;font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;}
+  .nav ul a{border-bottom:2px solid transparent;padding-bottom:2px;transition:border-color .2s;}
+  .nav ul a:hover{border-color:var(--red);}
+  @media (max-width:640px){.nav{flex-direction:column;gap:10px;} .nav ul{flex-wrap:wrap;justify-content:center;}}
+</style>
+</head>
+<body>
+ 
+<header class="nav">
+  <div class="logo">YOUR NAME<span>.</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#abilities">Skills</a></li>
+    <li><a href="#missions">Work</a></li>
+    <li><a href="#signal">Contact</a></li>
+  </ul>
+</header>
+ 
+<!-- more sections coming -->
+ 
 </body>
 </html>
