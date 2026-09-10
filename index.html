@@ -184,6 +184,26 @@
 
   .about-copy p{color:#3a3a3a;margin-bottom:16px;max-width:620px;}
   .about-copy strong{color:var(--ink);}
+
+  /* ---------- abilities ---------- */
+  .abilities{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+  }
+  .ability{
+    padding:24px;
+    transform:rotate(var(--r,0deg));
+  }
+  .ability:nth-child(2n){--r:0.6deg;}
+  .ability:nth-child(3n){--r:-0.6deg;}
+  .ability h3{font-size:20px;margin:10px 0 8px;}
+  .ability p{font-size:13px;color:var(--gray);}
+  .ability .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;
+    background:var(--yellow);border:2px solid var(--ink);
+    padding:2px 8px;display:inline-block;letter-spacing:0.05em;
+  }
 </style>
 </head>
 <body>
@@ -240,6 +260,20 @@
       <p>Replace this with your real story — where you learned to build things,
         what you care about, and the kind of work that energizes you.</p>
     </div>
+  </div>
+</section>
+
+<section id="abilities">
+  <div class="section-head">
+    <span class="burst">ZAP!</span>
+    <h2>Skills &amp; Tools</h2>
+    <p>Powers acquired through practice.</p>
+  </div>
+  <div class="abilities">
+    <div class="panel ability"><span class="tag">Expert</span><h3>Frontend Engineering</h3><p>React, TypeScript, CSS architecture, accessibility.</p></div>
+    <div class="panel ability"><span class="tag">Advanced</span><h3>Backend Systems</h3><p>Node, Python, REST/GraphQL APIs, databases.</p></div>
+    <div class="panel ability"><span class="tag">Advanced</span><h3>Cloud &amp; DevOps</h3><p>AWS, CI/CD pipelines, containerization.</p></div>
+    <div class="panel ability"><span class="tag">Proficient</span><h3>Design Collaboration</h3><p>Figma handoff, design systems, prototyping.</p></div>
   </div>
 </section>
 
