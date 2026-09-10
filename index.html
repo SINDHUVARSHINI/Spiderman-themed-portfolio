@@ -204,6 +204,18 @@
     background:var(--yellow);border:2px solid var(--ink);
     padding:2px 8px;display:inline-block;letter-spacing:0.05em;
   }
+
+  /* ---------- projects ---------- */
+  .missions{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;}
+  .mission{padding:26px;display:flex;flex-direction:column;gap:12px;transform:rotate(var(--r,0deg));}
+  .mission:nth-child(2n){--r:-0.5deg;}
+  .mission:nth-child(3n){--r:0.5deg;}
+  .mission h3{font-size:24px;}
+  .mission p{color:#3a3a3a;font-size:14px;}
+  .mission-tags{display:flex;gap:8px;flex-wrap:wrap;}
+  .mission-tags span{font-family:'IBM Plex Mono',monospace;font-size:11px;border:2px solid var(--ink);padding:3px 8px;}
+  .mission-link{font-family:'IBM Plex Mono',monospace;font-size:12px;align-self:flex-start;border-bottom:2px solid var(--ink);}
+  .mission-link:hover{color:var(--red);border-color:var(--red);}
 </style>
 </head>
 <body>
@@ -274,6 +286,34 @@
     <div class="panel ability"><span class="tag">Advanced</span><h3>Backend Systems</h3><p>Node, Python, REST/GraphQL APIs, databases.</p></div>
     <div class="panel ability"><span class="tag">Advanced</span><h3>Cloud &amp; DevOps</h3><p>AWS, CI/CD pipelines, containerization.</p></div>
     <div class="panel ability"><span class="tag">Proficient</span><h3>Design Collaboration</h3><p>Figma handoff, design systems, prototyping.</p></div>
+  </div>
+</section>
+
+<section id="missions">
+  <div class="section-head">
+    <span class="burst">SWING!</span>
+    <h2>Selected Projects</h2>
+    <p>A few favorites from the archive.</p>
+  </div>
+  <div class="missions">
+    <div class="panel mission">
+      <h3>Project Name</h3>
+      <p>One or two sentences on the problem this project solved and your role in solving it.</p>
+      <div class="mission-tags"><span>React</span><span>Node</span><span>PostgreSQL</span></div>
+      <a href="#" class="mission-link">View Project →</a>
+    </div>
+    <div class="panel mission">
+      <h3>Project Name</h3>
+      <p>One or two sentences on the problem this project solved and your role in solving it.</p>
+      <div class="mission-tags"><span>Python</span><span>AWS</span><span>Redis</span></div>
+      <a href="#" class="mission-link">View Project →</a>
+    </div>
+    <div class="panel mission">
+      <h3>Project Name</h3>
+      <p>One or two sentences on the problem this project solved and your role in solving it.</p>
+      <div class="mission-tags"><span>TypeScript</span><span>GraphQL</span></div>
+      <a href="#" class="mission-link">View Project →</a>
+    </div>
   </div>
 </section>
 
