@@ -136,6 +136,54 @@
     pointer-events:none;
     z-index:-1;
   }
+
+  /* ---------- section shell ---------- */
+  section{padding:90px 6vw;}
+  .section-head{margin-bottom:50px;}
+  .section-head h2{
+    font-size:clamp(36px,5.5vw,58px);
+    margin-top:14px;
+  }
+  .section-head p{color:var(--gray);max-width:380px;margin-top:10px;font-size:14px;}
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:44px;
+  }
+  @media (max-width:800px){.about-grid{grid-template-columns:1fr;}}
+
+  .id-photo{
+    aspect-ratio:3/4;
+    position:relative;
+    overflow:hidden;
+    cursor:none;
+  }
+  .id-photo .layer{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;padding:12px;
+    background-size:cover;background-position:center;
+  }
+  .id-photo .layer-top{
+    background:repeating-linear-gradient(135deg, var(--red), var(--red) 10px, #b81c27 10px, #b81c27 20px);
+    color:var(--paper);z-index:2;
+    clip-path:circle(0px at 50% 50%);
+    transition:clip-path .05s linear;
+  }
+  .id-photo .layer-bottom{
+    background:repeating-linear-gradient(135deg, #e7e4da, #e7e4da 8px, #dedad0 8px, #dedad0 16px);
+    color:var(--gray);z-index:1;
+  }
+  .id-photo .reveal-hint{
+    position:absolute;bottom:8px;left:0;right:0;text-align:center;
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;
+    color:var(--gray);z-index:3;pointer-events:none;text-transform:uppercase;
+  }
+
+  .about-copy p{color:#3a3a3a;margin-bottom:16px;max-width:620px;}
+  .about-copy strong{color:var(--ink);}
 </style>
 </head>
 <body>
@@ -166,6 +214,31 @@
     </div>
     <div class="panel hero-panel">
       <div class="frame">[ Hero image / illustration ]<br>your own art or photo</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-head">
+    <span class="burst">POW!</span>
+    <h2>About Me</h2>
+    <p>The origin story, no radioactive spiders required.</p>
+  </div>
+  <div class="about-grid">
+    <div class="panel id-photo" id="revealPhoto">
+      <div class="layer layer-bottom">[ Your real photo ]<br>set as background-image</div>
+      <div class="layer layer-top">[ Spider-Man image ]<br>set as background-image</div>
+      <span class="reveal-hint">Hover to unmask</span>
+    </div>
+    <div class="about-copy">
+      <p>I'm a <strong>software engineer</strong> who likes fixing things that
+        are broken — code, systems, the occasional bad UI. Started out building
+        <strong>[your first project]</strong> and haven't stopped since.</p>
+      <p>These days I focus on <strong>[your specialty]</strong>. When I'm not
+        at the keyboard, I'm probably <strong>[hobby]</strong> or chasing down
+        the next interesting problem.</p>
+      <p>Replace this with your real story — where you learned to build things,
+        what you care about, and the kind of work that energizes you.</p>
     </div>
   </div>
 </section>
